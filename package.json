@@ -1,7 +1,7 @@
 {
   "name": "ready-to-remble",
   "version": "0.1.0",
-  "private": true,
+  "homepage": "https://brendanlacroix.github.io/ready-to-remble/",
   "dependencies": {
     "classnames": "^2.2.6",
     "react": "^16.5.2",
