@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 
 import TypeSizeInputs from './components/TypeSizeInputs';
+import AddSelector from './components/AddSelector';
 import CSSDisplay from './components/CSSDisplay';
 // import PreviewWindow from './components/PreviewWindow';
 
@@ -67,7 +68,34 @@ class App extends Component {
   constructor(props) {
     super(props);
 
+    this.addSelector = this.addSelector.bind(this);
+    this.removeSelector = this.removeSelector.bind(this);
     this.updateTypography = this.updateTypography.bind(this);
+  }
+
+  addSelector(selector) {
+    const sizes = {...this.state.sizes};
+
+    sizes.minimum[selector] = {
+      fontSize   : 0,
+      lineHeight : 0
+    };
+
+    sizes.maximum[selector] = {
+      fontSize   : 0,
+      lineHeight : 0
+    };
+
+    this.setState({ sizes });
+  }
+
+  removeSelector(selector) {
+    const sizes = {...this.state.sizes};
+
+    delete sizes.minimum[selector];
+    delete sizes.maximum[selector];
+
+    this.setState({ sizes });
   }
 
   updateTypography(e) {
@@ -78,22 +106,20 @@ class App extends Component {
       sizes[e.target.dataset.endpoint][e.target.dataset.selector][e.target.dataset.property] = valueInt;
     }
 
-    this.setState(sizes);
+    this.setState({ sizes });
   }
 
   render() {
     return (
       <div className="App">
-        <TypeSizeInputs endpoint="minimum" onChange={this.updateTypography} sizes={this.state.sizes.minimum} />
+        <TypeSizeInputs onChange={this.updateTypography} onRemoveSelector={this.removeSelector} sizes={this.state.sizes} />
         <br />
-        <TypeSizeInputs endpoint="maximum" onChange={this.updateTypography} sizes={this.state.sizes.maximum} />
+
+        <AddSelector onSubmit={this.addSelector} />
 
         <CSSDisplay sizes={this.state.sizes} />
       </div>
     );
-
-    //<PreviewWindow wrapperClasses="App-preview" sizes={ this.state.sizes } />
-    // <PreviewWindow wrapperClasses="App-preview" sizes={ this.state.sizes } />
   }
 }
 
