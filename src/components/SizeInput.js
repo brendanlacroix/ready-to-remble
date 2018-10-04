@@ -7,9 +7,10 @@ class SizeInput extends Component {
   render() {
     const {
       endpoint,
-      ident,
+      name,
       onChange,
       type,
+      selector,
       value,
       wrapperClasses
     } = this.props;
@@ -18,16 +19,15 @@ class SizeInput extends Component {
 
     return (
       <div className={classes}>
-        <label htmlFor={`${ident}-${type}`}>
-          {`${ endpoint.charAt(0).toUpperCase() + endpoint.slice(1) } ${ type === 'lineHeight' ? 'line-height' : 'font-size' }:`}
-          <input
-            id={`${ident}-${type}`}
-            data-endpoint={endpoint}
-            data-selector={value}
-            data-property={type}
-            onChange={onChange}
-            value={value} />
-        </label>
+        <label className="SizeInput-label" htmlFor={name}>{`${ endpoint } ${ type === 'lineHeight' ? 'line-height' : 'font-size' }:`}</label>
+        <input
+          id={name}
+          className="SizeInput-field"
+          data-endpoint={endpoint}
+          data-selector={selector}
+          data-property={type}
+          onChange={onChange}
+          value={value} />
       </div>
     );
   }

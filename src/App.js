@@ -3,7 +3,6 @@ import React, { Component } from 'react';
 import SizeInputs from './components/SizeInputs';
 import AddSelector from './components/AddSelector';
 import CSSDisplay from './components/CSSDisplay';
-// import PreviewWindow from './components/PreviewWindow';
 
 import './App.css';
 
@@ -112,6 +111,36 @@ class App extends Component {
   render() {
     return (
       <div className="App">
+        <header className="App-header">
+          <h1 className="App-title"><span role="presentation" className="App-logo">🤼‍♀️</span>Ready to REMble</h1>
+          <div>
+            <p>
+              Using <span className="App-ms">rem</span> and <span className="App-ms">vw</span>,
+              you can scale your site to look great on any browser... with less fuss (and less ugly whitespace <span role="presentation" className="App-emoji">😓</span>) than CSS grid systems.
+            </p>
+            <p>
+              The problem? It's unlikely that everything scales the same way from mobile to desktop. Your <span className="App-ms">body</span>
+              text might only get a big bigger, while your <span className="App-ms">h1</span> shoots to double the size <span role="presentation" className="App-emoji">🚀</span>. Suddenly,
+              <span className="App-ms">rem</span> isn't saving you any time &mdash; you're still writing media queries to
+              tweak your <span className="App-ms">font-size</span>.
+            </p>
+            <p>
+              Ready to REmble takes all your <span className="App-ms">font-size</span> and <span className="App-ms">line-height</span>
+              values and calculates an <em>average</em> scaling function <span role="presentation" className="App-emoji">📈</span>. Put that in your <span className="App-ms">:root</span>
+              and you can use <span className="App-ms">rem</span> <em>anywhere</em> to get an appropriate measure.
+              Use <span className="App-ms">rem</span> for margins, paddings, height, width, <em>everything</em>.
+            </p>
+            <p>
+              Then, that average scaling function is used as the base to create tailored, <span className="App-ms">vw</span>-driven
+              functions for each font style you define. Your typography will scale exactly as you specify, leaving you with
+              <span role="presentation" className="App-emoji">👏</span>&nbsp;balanced&nbsp;<span role="presentation" className="App-emoji">👏</span>&nbsp;whitespace&nbsp;<span role="presentation" className="App-emoji">👏</span> at <span role="presentation" className="App-emoji">👏</span> any <span role="presentation" className="App-emoji">👏</span> viewport <span role="presentation" className="App-emoji">👏</span>&nbsp;width
+              and no media queries to worry about.
+            </p>
+            <p>
+              <span role="presentation" className="App-big-emoji">🤼‍♀️</span>&nbsp;<span role="presentation" className="App-big-emoji">🎉</span>
+            </p>
+          </div>
+        </header>
         <section className="App-inputs">
           <SizeInputs onChange={this.updateTypography} onRemoveSelector={this.removeSelector} sizes={this.state.sizes} />
           <AddSelector wrapperClasses="App-add-selector" onSubmit={this.addSelector} />

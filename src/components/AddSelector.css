@@ -1,0 +1,30 @@
+.AddSelector-form {
+  display: flex;
+  justify-content: center;
+
+  width: 100%;
+}
+.AddSelector-input,
+.AddSelector-submit {
+  display: flex;
+  align-items: center;
+
+  height: 40px;
+  line-height: 40px;
+  padding: 5px;
+
+  font-size: 25px;
+}
+.AddSelector-input {
+  width: 25%;
+}
+.AddSelector-submit {
+    padding: 0 15px;
+    background: #33be7b;
+    border: 0 none;
+    border-radius: 0 3px 3px 0;
+
+    color: white;
+
+    cursor: pointer;
+}

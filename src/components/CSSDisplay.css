@@ -1,4 +1,7 @@
 .CSSDisplay {
-  margin-top: 50px;
-  font-family: monospace;
+  width: 90%;
+  margin: 50px auto 100px;
+}
+.CSSDisplay-key {
+  text-align: center;
 }

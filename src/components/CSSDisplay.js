@@ -111,9 +111,15 @@ class PreviewWindow extends Component {
     });
 
     return (
-      <pre className="CSSDisplay">
-        <SyntaxHighlighter style={ghcolors}>{ code }</SyntaxHighlighter>
-      </pre>
+      <div className="CSSDisplay">
+        <div className="CSSDisplay-key">
+          <h3>{`At ${this.minimumBrowserWidth}px browser width, divide pixels by ${this.getAverageScaling(this.props.sizes.minimum)} to convert to rems.`}</h3>
+          <h3>{`At ${this.maximumBrowserWidth}px browser width, divide pixels by ${this.getAverageScaling(this.props.sizes.maximum)} to convert to rems.`}</h3>
+        </div>
+        <pre>
+          <SyntaxHighlighter style={ghcolors}>{ code }</SyntaxHighlighter>
+        </pre>
+      </div>
     );
   }
 }

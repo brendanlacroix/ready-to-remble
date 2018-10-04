@@ -29,9 +29,9 @@ class AddSelector extends Component {
 
     return (
       <div className={classes}>
-        <form onSubmit={this.onSubmit}>
-          <input type="text" name="selector" onChange={this.onChange} placeholder="Add a selector" />
-          <input type="submit" disabled={!this.state.selector.length} />
+        <form className="AddSelector-form" onSubmit={this.onSubmit}>
+          <input className="AddSelector-input" type="text" name="selector" onChange={this.onChange} placeholder="Add a selector..." />
+          <input className="AddSelector-submit" type="submit" disabled={!this.state.selector.length} value="+" />
         </form>
       </div>
     );

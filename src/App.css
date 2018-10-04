@@ -1,5 +1,53 @@
-.App-inputs {
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+
+  background-color: #fafafa;
+}
+
+.App {
   padding: 40px;
+}
+.App-header {
+  display: flex;
+  align-items: center;
+  padding-bottom: 25px;
+  border-bottom: 1px solid #dadada;
+  margin-bottom: 50px;
+}
+.App-logo {
+  text-align: center;
+  font-size: 100px;
+  margin-right: 40px;
+}
+.App-title {
+  display: flex;
+  align-items: center;
+
+  flex: 0 0 40%;
+  margin-right: 50px;
+}
+.App-ms {
+  display: inline-block;
+  border: 1px solid #dadada;
+  border-radius: 3px;
+  padding: 0 5px;
+  margin: 0 .25em;
+
+  font-family: monospace;
+  font-size: 18px;
+
+  background-color: white;
+}
+.App-emoji {
+  font-size: 25px;
+}
+.App-big-emoji {
+  font-size: 50px;
 }
 .App-add-selector {
   display: flex;

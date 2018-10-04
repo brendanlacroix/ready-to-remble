@@ -1,36 +1,5 @@
 .SizeInputs {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  grid-gap: 80px;
-}
-.SizeInputs-entry {
-  position: relative;
-
-  display: grid;
-  grid-template-areas:
-    'title title'
-    'fsmin fsmax'
-    'lhmin lhmax';
-
-  border: 1px solid #dadada;
-}
-.SizeInputs-entry-title {
-  grid-area: title;
-}
-.SizeInputs-font-size-min {
-  grid-area: fsmin;
-}
-.SizeInputs-font-size-max {
-  grid-area: fsmax;
-}
-.SizeInputs-line-height-min {
-  grid-area: lhmin;
-}
-.SizeInputs-line-height-max {
-  grid-area: lhmax;
-}
-.SizeInputs-remove-selector {
-  position: absolute;
-  top: 0;
-  right: 0;
+  grid-gap: 20px;
 }
