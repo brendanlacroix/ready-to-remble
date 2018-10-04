@@ -3,9 +3,12 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "lorem-ipsum": "^1.0.6",
     "react": "^16.5.2",
     "react-dom": "^16.5.2",
-    "react-scripts": "2.0.3"
+    "react-frame-component": "^4.0.1",
+    "react-scripts": "2.0.3",
+    "react-syntax-highlighter": "^8.0.1"
   },
   "scripts": {
     "start": "react-scripts start",

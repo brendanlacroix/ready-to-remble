@@ -1,0 +1,7 @@
+.CSSDisplay {
+  margin-top: 50px;
+  font-family: monospace;
+}
+.CSSDisplay-code {
+  /*white-space: pre-wrap;*/
+}
