@@ -32,3 +32,6 @@
 
   cursor: pointer;
 }
+.AddSelector-submit[disabled] {
+  opacity: 0.5;
+}

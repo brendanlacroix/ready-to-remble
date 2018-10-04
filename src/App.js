@@ -67,25 +67,37 @@ class App extends Component {
   constructor(props) {
     super(props);
 
+    this.isDuplicateSelector = this.isDuplicateSelector.bind(this);
     this.addSelector = this.addSelector.bind(this);
     this.removeSelector = this.removeSelector.bind(this);
     this.updateTypography = this.updateTypography.bind(this);
   }
 
+  isDuplicateSelector(selector) {
+    if (this.state.sizes.minimum[selector.trim()]) {
+      return true;
+    }
+
+    return false;
+  }
+
   addSelector(selector) {
     const sizes = {...this.state.sizes};
+    const trimmedSelector = selector.trim();
 
-    sizes.minimum[selector] = {
-      fontSize   : 0,
-      lineHeight : 0
-    };
+    if (!this.isDuplicateSelector(trimmedSelector)) {
+      sizes.minimum[trimmedSelector] = {
+        fontSize   : 0,
+        lineHeight : 0
+      };
 
-    sizes.maximum[selector] = {
-      fontSize   : 0,
-      lineHeight : 0
-    };
+      sizes.maximum[trimmedSelector] = {
+        fontSize   : 0,
+        lineHeight : 0
+      };
 
-    this.setState({ sizes });
+      this.setState({ sizes });
+    }
   }
 
   removeSelector(selector) {
@@ -154,7 +166,7 @@ class App extends Component {
               })
             }
           </section>
-          <AddSelector wrapperClasses="App-add-selector" onSubmit={this.addSelector} />
+          <AddSelector wrapperClasses="App-add-selector" onSubmit={this.addSelector} isDuplicateSelector={this.isDuplicateSelector} />
         </div>
 
         <CSSDisplay sizes={this.state.sizes} />
