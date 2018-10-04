@@ -31,6 +31,12 @@ body {
   flex: 0 0 40%;
   margin-right: 50px;
 }
+.App-description {
+  line-height: 25px;
+}
+.App-last-description-paragraph {
+  margin-top: 50px;
+}
 .App-ms {
   display: inline-block;
   border: 1px solid #dadada;

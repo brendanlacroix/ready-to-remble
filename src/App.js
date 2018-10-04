@@ -113,7 +113,7 @@ class App extends Component {
       <div className="App">
         <header className="App-header">
           <h1 className="App-title"><span role="presentation" className="App-logo">🤼‍♀️</span>Ready to REMble</h1>
-          <div>
+          <div className="App-description">
             <p>
               Using <span className="App-ms">rem</span> and <span className="App-ms">vw</span>,
               you can scale your site to look great on any browser... with less fuss (and less ugly whitespace <span role="presentation" className="App-emoji">😓</span>) than CSS grid systems.
@@ -125,7 +125,7 @@ class App extends Component {
               tweak your <span className="App-ms">font-size</span>.
             </p>
             <p>
-              Ready to REmble takes all your <span className="App-ms">font-size</span> and <span className="App-ms">line-height</span>
+              <strong>Ready to REmble</strong> takes all your <span className="App-ms">font-size</span> and <span className="App-ms">line-height</span>
               values and calculates an <em>average</em> scaling function <span role="presentation" className="App-emoji">📈</span>. Put that in your <span className="App-ms">:root</span>
               and you can use <span className="App-ms">rem</span> <em>anywhere</em> to get an appropriate measure.
               Use <span className="App-ms">rem</span> for margins, paddings, height, width, <em>everything</em>.
@@ -136,8 +136,8 @@ class App extends Component {
               <span role="presentation" className="App-emoji">👏</span>&nbsp;balanced&nbsp;<span role="presentation" className="App-emoji">👏</span>&nbsp;whitespace&nbsp;<span role="presentation" className="App-emoji">👏</span> at <span role="presentation" className="App-emoji">👏</span> any <span role="presentation" className="App-emoji">👏</span> viewport <span role="presentation" className="App-emoji">👏</span>&nbsp;width
               and no media queries to worry about.
             </p>
-            <p>
-              <span role="presentation" className="App-big-emoji">🤼‍♀️</span>&nbsp;<span role="presentation" className="App-big-emoji">🎉</span>
+            <p className="App-last-description-paragraph">
+              <span role="presentation" className="App-big-emoji">🎉</span>&nbsp;<span role="presentation" className="App-big-emoji">🎉</span>
             </p>
           </div>
         </header>
