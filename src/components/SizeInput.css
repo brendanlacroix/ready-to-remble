@@ -2,7 +2,20 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+
+  height: 2.5rem;
+
+  font-family: monospace;
 }
 .SizeInput-label {
-  font-family: monospace;
+
+}
+.SizeInput-field {
+  width: 5rem;
+  margin-right: 0.5rem;
+
+  text-align: right;
+
+  border: 0;
+  border-bottom: 1px solid #dadada;
 }

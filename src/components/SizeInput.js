@@ -20,14 +20,17 @@ class SizeInput extends Component {
     return (
       <div className={classes}>
         <label className="SizeInput-label" htmlFor={name}>{`${ endpoint } ${ type === 'lineHeight' ? 'line-height' : 'font-size' }:`}</label>
-        <input
-          id={name}
-          className="SizeInput-field"
-          data-endpoint={endpoint}
-          data-selector={selector}
-          data-property={type}
-          onChange={onChange}
-          value={value} />
+        <div>
+          <input
+            id={name}
+            className="SizeInput-field"
+            data-endpoint={endpoint}
+            data-selector={selector}
+            data-property={type}
+            onChange={onChange}
+            value={value} />
+          <span>px</span>
+        </div>
       </div>
     );
   }

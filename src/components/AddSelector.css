@@ -11,20 +11,24 @@
 
   height: 40px;
   line-height: 40px;
-  padding: 5px;
-
-  font-size: 25px;
+  padding: 10px;
 }
 .AddSelector-input {
   width: 25%;
+  border: 1px solid #dadada;
+  border-radius: 3px 0 0 3px;
+  border-right-width: 0;
+
+  font-size: 20px;
 }
 .AddSelector-submit {
-    padding: 0 15px;
-    background: #33be7b;
-    border: 0 none;
-    border-radius: 0 3px 3px 0;
+  padding: 0 15px;
+  background: #33be7b;
+  border: 0 none;
+  border-radius: 0 3px 3px 0;
 
-    color: white;
+  color: white;
+  font-size: 25px;
 
-    cursor: pointer;
+  cursor: pointer;
 }
