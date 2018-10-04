@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-import SizeInputs from './components/SizeInputs';
+import SelectorGroup from './components/SelectorGroup';
 import AddSelector from './components/AddSelector';
 import CSSDisplay from './components/CSSDisplay';
 
@@ -141,11 +141,21 @@ class App extends Component {
             </p>
           </div>
         </header>
-        <section className="App-inputs">
-          <SizeInputs onChange={this.updateTypography} onRemoveSelector={this.removeSelector} sizes={this.state.sizes} />
+        <div className="App-inputs">
+          <section className="App-selectors">
+            {
+              Object.keys(this.state.sizes.minimum).map((selector, key) => {
+                return <SelectorGroup
+                  key={key}
+                  selector={selector}
+                  onChange={this.updateTypography}
+                  onRemoveSelector={this.removeSelector}
+                  sizes={this.state.sizes} />;
+              })
+            }
+          </section>
           <AddSelector wrapperClasses="App-add-selector" onSubmit={this.addSelector} />
-        </section>
-
+        </div>
 
         <CSSDisplay sizes={this.state.sizes} />
       </div>

@@ -55,6 +55,11 @@ body {
 .App-big-emoji {
   font-size: 50px;
 }
+.App-selectors {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 20px;
+}
 .App-add-selector {
   display: flex;
   justify-content: center;
