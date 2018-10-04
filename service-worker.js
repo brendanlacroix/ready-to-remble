@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/3.6.2/workbox-sw.js");
 
 importScripts(
-  "/ready-to-remble/precache-manifest.fac90902dfa1c6522e8cfe0f04e7531c.js"
+  "/ready-to-remble/precache-manifest.3fd6d999bed806915cf7c9da1a8f6453.js"
 );
 
 workbox.clientsClaim();
