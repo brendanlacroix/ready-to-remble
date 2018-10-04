@@ -1,9 +1,0 @@
-/*.App {
-  display: grid;
-  grid-template-areas:
-    'input  input'
-    'preview preview';
-}
-.App-preview {
-  grid-area: preview;
-}*/
