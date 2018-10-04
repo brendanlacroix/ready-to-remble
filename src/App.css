@@ -1,0 +1,9 @@
+.App-inputs {
+  padding: 40px;
+}
+.App-add-selector {
+  display: flex;
+  justify-content: center;
+
+  padding: 20px;
+}

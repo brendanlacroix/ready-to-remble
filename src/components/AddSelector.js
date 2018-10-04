@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import classnames from 'classnames';
 
 import './AddSelector.css';
 
@@ -24,8 +25,10 @@ class AddSelector extends Component {
   }
 
   render() {
+    const classes = classnames('AddSelector', this.props.wrapperClasses);
+
     return (
-      <div className="AddSelector">
+      <div className={classes}>
         <form onSubmit={this.onSubmit}>
           <input type="text" name="selector" onChange={this.onChange} placeholder="Add a selector" />
           <input type="submit" disabled={!this.state.selector.length} />

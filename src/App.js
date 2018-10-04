@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-import TypeSizeInputs from './components/TypeSizeInputs';
+import SizeInputs from './components/SizeInputs';
 import AddSelector from './components/AddSelector';
 import CSSDisplay from './components/CSSDisplay';
 // import PreviewWindow from './components/PreviewWindow';
@@ -112,10 +112,11 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <TypeSizeInputs onChange={this.updateTypography} onRemoveSelector={this.removeSelector} sizes={this.state.sizes} />
-        <br />
+        <section className="App-inputs">
+          <SizeInputs onChange={this.updateTypography} onRemoveSelector={this.removeSelector} sizes={this.state.sizes} />
+          <AddSelector wrapperClasses="App-add-selector" onSubmit={this.addSelector} />
+        </section>
 
-        <AddSelector onSubmit={this.addSelector} />
 
         <CSSDisplay sizes={this.state.sizes} />
       </div>
